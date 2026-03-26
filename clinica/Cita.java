@@ -7,7 +7,7 @@ public class Cita {
 	private LocalDateTime fechaYhora;
 	private Paciente paciente;
 	private Medico medico;
-	private Boolean estado;
+	private boolean estado;
 	
 	
 	public Cita(LocalDateTime fechaYhora, Paciente paciente, Medico medico) {
@@ -16,10 +16,13 @@ public class Cita {
 		this.paciente = paciente;
 		this.medico = medico;
 	}
-
+	
+	
+	
 	public LocalDateTime getFechaYhora() {
 		return fechaYhora;
 	}
+
 
 
 	public void setFechaYhora(LocalDateTime fechaYhora) {
@@ -27,9 +30,23 @@ public class Cita {
 	}
 
 
+
+	public Paciente getPaciente() {
+		return paciente;
+	}
+
+
+
+	public void setPaciente(Paciente paciente) {
+		this.paciente = paciente;
+	}
+
+
+
 	public Medico getMedico() {
 		return medico;
 	}
+
 
 
 	public void setMedico(Medico medico) {
@@ -37,23 +54,24 @@ public class Cita {
 	}
 
 
-	public Boolean getEstado() {
+
+	public boolean getEstado() {
 		return estado;
 	}
 
 
-	public void setEstado(Boolean estado) {
+
+	public void setEstado(boolean estado) {
 		this.estado = estado;
 	}
 
 
-	public void setPaciente(Paciente paciente) {
-		this.paciente = paciente;
-	}
+
 	@Override
 	public String toString() {
+		String estadito = (this.estado)? "Disponible":"No disponible";
 		// TODO Auto-generated method stub
 		return "Fecha y Hora: "+ fechaYhora + " Paciente: "+ paciente + " Medico: " 
-				+ medico;
+				+ medico + " " + estadito;
 	}
 }
