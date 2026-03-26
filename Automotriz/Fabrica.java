@@ -19,7 +19,13 @@ public class Fabrica {
 	
 	public void mostrarAutos() {
 		for(Auto auto : listaAutomoviles) {
+			//System.out.println("Marca " + auto.getMarca()
+				//				+"Modelo " + auto.getModelo()
+				//				+"Propietario " +auto.getCliente().getNombre()
+				//				+"Motor " +auto.getMotor().getTipo()
+				//				+"Llantas " +auto.getLlantas().toString());
 			System.out.println(auto);
+			
 
 		}
 	}
