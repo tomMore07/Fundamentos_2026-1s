@@ -19,6 +19,6 @@ public class Motor {
 	}
 	@Override
 	public String toString() {
-		return " Tipo " + this.tipo;
+		return " Tipo " + tipo;
 	}
 }
