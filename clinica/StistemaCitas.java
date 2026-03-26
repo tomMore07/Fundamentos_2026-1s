@@ -57,7 +57,7 @@ public class SistenmaCitas {
 			
 			}
 			
-			public List<Cita> buscarPorEcha (LocalDateTime fechaBuscada) {
+			public List<Cita> buscarPorFecha (LocalDateTime fechaBuscada) {
 			    List<Cita> resultado = new ArrayList<>();
 			    
 			    for(Cita cita : listaCitas) {
