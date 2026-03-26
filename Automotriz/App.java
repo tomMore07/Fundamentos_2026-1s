@@ -1,42 +1,82 @@
 package automotriz;
 
-import banco.Cuenta;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Appa {
-
-	public static void main(String[] args) {
-		// Se crea un objeto de la clase 
-		Fabrica miFabrica =new Fabrica ();
-		
-		// objetos cliente
-		Cliente cliente1 =new Cliente("Ernesto");
-		Cliente cliente2 =new Cliente("Juan");
-		
-		// objeto automovil
-		Auto auto1 =new Auto("Porsche", 2021, cliente1);
-		Auto auto2 =new Auto("Audi", 2019, cliente2);
-		
-		// agregar objeto llanta
-		Llanta llanta1 =new Llanta("Michelin");
-		Llanta llanta2 =new Llanta("Michelin");
-		Llanta llanta3 =new Llanta("Michelin");
-		Llanta llanta4 =new Llanta("Michelin");
-				
-		auto1.agregarLlanta(llanta1);
-		auto1.agregarLlanta(llanta2);
-		auto1.agregarLlanta(llanta3);
-		auto1.agregarLlanta(llanta4);
-		
-		
-		
-		// objeto motor
-		Motor motor1 =new Motor("Gasolina");
-		Motor motor2 =new Motor("Electrico");
-		
-		miFabrica.agregarAutomovil(auto1);
-		miFabrica.agregarAutomovil(auto2);
-		miFabrica.mostrarAutos();
-		
+public class Auto {
+	
+	private String marca;
+	private int modelo;
+	private Motor motor;
+	private Cliente cliente;
+	private List<Llanta> llantas;
+	
+	
+	
+	
+	public Auto(String marca, int modelo, Cliente cliente, String tipoMotor) {
+		super();
+		this.marca = marca;
+		this.modelo = modelo;
+		//Agregacion
+		this.cliente = cliente;	
+		//Composicion
+		this.motor = new Motor(tipoMotor);
+		//Composicion
+		this.llantas = new ArrayList<Llanta>();
 	}
-}
+	
+	public void agregarLlanta(Llanta llanta) {
+		this.llantas.add(llanta);
+	}
+	
 
+	public String getMarca() {
+		return marca;
+	}
+
+	public void setMarca(String marca) {
+		this.marca = marca;
+	}
+
+	public int getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(int modelo) {
+		this.modelo = modelo;
+	}
+
+	public Motor getMotor() {
+		return motor;
+	}
+
+	public void setMotor(Motor motor) {
+		this.motor = motor;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public List<Llanta> getLlantas() {
+		return llantas;
+	}
+
+	public void setLlantas(List<Llanta> llantas) {
+		this.llantas = llantas;
+	}
+
+	@Override
+	public String toString() {
+		return "Propietario del Vehiculo: " + cliente + "| Marca del auto: " + marca + "| Modelo: " + modelo 
+				+ "| Motor: " + motor + "| Referencia de Llantas: " + llantas;
+	}
+	
+	
+	
+}
