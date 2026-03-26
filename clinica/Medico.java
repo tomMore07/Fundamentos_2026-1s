@@ -8,19 +8,25 @@ public class Medico {
 	private String nombre;
 	private String especialidad;
 	private LocalTime inicioHorarioTrabajo;
-	private LocalTime FinHorarioTrabajo;
+	private LocalTime finHorarioTrabajo;
 	
-	
-	public Medico(int identificacion, String nombre, String especialidad, LocalTime inicioHoratioTrabajo,
+	public Medico(int identificacion, String nombre, String especialidad, LocalTime inicioHorarioTrabajo,
 			LocalTime finHorarioTrabajo) {
 		super();
 		this.identificacion = identificacion;
 		this.nombre = nombre;
 		this.especialidad = especialidad;
-		this.inicioHorarioTrabajo = inicioHoratioTrabajo;
-		FinHorarioTrabajo = finHorarioTrabajo;
-		
-		
+		this.inicioHorarioTrabajo = inicioHorarioTrabajo;
+		this.finHorarioTrabajo = finHorarioTrabajo;
 	}
-
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Nombre Doctor: "+ this.nombre + " Especialidad:"+ this.especialidad + " Horario:" 
+				+ inicioHorarioTrabajo+finHorarioTrabajo;
+	}
+	
+	
+	
 }
