@@ -31,9 +31,44 @@ public class SistenmaCitas {
 		}
 		
 		
-		public List<Cita> buscarPorPaciente(Paciente nombre){
+		public List<Cita> buscarPorPaciente (String nombreBuscado) {
+			    List<Cita> resultado = new ArrayList<>();
+			    
+			    for(Cita cita : listaCitas) {
+			    	if(cita.getPaciente().getNombre() == nombreBuscado) {
+			    		resultado.add(cita);
+			    	
+			    	}
+				
+			    } return resultado;
 			
-		}
+			}
+			
+			public List<Cita> buscarPorMedico (String nombreBuscado) {
+			    List<Cita> resultado = new ArrayList<>();
+			    
+			    for(Cita cita : listaCitas) {
+			    	if(cita.getMedico().getNombre() == nombreBuscado) {
+			    		resultado.add(cita);
+			    	
+			    	}
+				
+			    } return resultado;
+			
+			}
+			
+			public List<Cita> buscarPorEcha (LocalDateTime fechaBuscada) {
+			    List<Cita> resultado = new ArrayList<>();
+			    
+			    for(Cita cita : listaCitas) {
+			    	if(cita.getFechaYhora() == fechaBuscada) {
+			    		resultado.add(cita);
+			    	
+			    	}
+				
+			    } return resultado;
+			
+			}
 		
 }
 
