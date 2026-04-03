@@ -27,7 +27,7 @@ public class Sistema {
 	
 	public void agregarExamenes(Paciente paciente, Paciente examen) {
 		
-		this.listaPacientes.add(examen);
+		this.listaPacientes.add(paciente);
 	}
 	
 	public void agregarTratamientos(Paciente paciente, Tratamiento tratamientio) {
