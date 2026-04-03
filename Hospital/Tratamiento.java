@@ -40,7 +40,7 @@ public class Tratamiento {
 
 		    public void calcularEficacia(Paciente paciente) {
 		    	
-		        Paciente.EnumTipo tipo = paciente.getTipoCancer();
+		        TipoCancer tipo = paciente.getTipocancer();
 		        double porcentajeEficacia = 0.0;
 
 		        if (tipo != null) {
