@@ -1,4 +1,4 @@
-package lab5;
+package hospital;
 
 import java.time.LocalDate;
 
