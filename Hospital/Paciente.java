@@ -1,5 +1,7 @@
 package hospital;
 
+import java.util.List;
+
 public class Paciente {
 	
 
@@ -81,6 +83,11 @@ public class Paciente {
 
 	public void setEstadoActual(String estadoActual) {
 		this.estadoActual = estadoActual;
+	}
+
+	@Override
+	public String toString() {
+		return "Paciente = " + nombre + " Genero = " + genero + " EstadoActual = " + estadoActual + "";
 	}
 	
 	
