@@ -1,5 +1,5 @@
 package hospital;
 
 public enum TipoCancer {
-	Sarcoma, Lecuemia, Linfoma;
+	Sarcoma, Leucemia, Linfoma;
 }
