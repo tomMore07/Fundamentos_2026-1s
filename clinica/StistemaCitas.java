@@ -9,7 +9,7 @@ public class SistenmaCitas {
 		private List<Medico> listaMedico;
 		private List<Cita> listaCita;	
 		
-		public SistemaCitas(List<Paciente> listaPaciente, List<Medico> listaMedico, List<Cita> listaCita) {
+		public SistemaCitas(List<Paciente> listaPaciente, List<Medico> listaMedicos, List<Cita> listaCita) {
 			super();
 			this.listaPaciente = new ArrayList<>();
 			this.listaMedico = new ArrayList<>();
