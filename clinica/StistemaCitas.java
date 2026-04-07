@@ -1,9 +1,10 @@
 package clinica;
 
 	import java.util.List;
+	import java.time.LocalDateTime;
 	import java.util.ArrayList;
 
-public class SistenmaCitas {
+public class SistemaCitas {
 	
 		private List<Paciente> listaPaciente;
 		private List<Medico> listaMedico;
@@ -28,7 +29,7 @@ public class SistenmaCitas {
 
 		public void registrarCita(Cita cita) {
 	        if (cita != null) {
-	            this.listaCitas.add(cita);
+	            this.listaCita.add(cita);
 	            System.out.println("Cita registrada correctamente.");
 	        }
 	    }
@@ -43,7 +44,7 @@ public class SistenmaCitas {
 		public List<Cita> buscarPorPaciente (String nombreBuscado) {
 			    List<Cita> resultado = new ArrayList<>();
 			    
-			    for(Cita cita : listaCitas) {
+			    for(Cita cita : listaCita) {
 			    	if(cita.getPaciente().getNombre() == nombreBuscado) {
 			    		resultado.add(cita);
 			    	
@@ -53,10 +54,10 @@ public class SistenmaCitas {
 			
 			}
 			
-			public List<Cita> buscarPorMedico (String nombreBuscado) {
+		public List<Cita> buscarPorMedico (String nombreBuscado) {
 			    List<Cita> resultado = new ArrayList<>();
 			    
-			    for(Cita cita : listaCitas) {
+			    for(Cita cita : listaCita) {
 			    	if(cita.getMedico().getNombre() == nombreBuscado) {
 			    		resultado.add(cita);
 			    	
@@ -66,10 +67,10 @@ public class SistenmaCitas {
 			
 			}
 			
-			public List<Cita> buscarPorFecha (LocalDateTime fechaBuscada) {
+		public List<Cita> buscarPorFecha (LocalDateTime fechaBuscada) {
 			    List<Cita> resultado = new ArrayList<>();
 			    
-			    for(Cita cita : listaCitas) {
+			    for(Cita cita : listaCita) {
 			    	if(cita.getFechaYhora() == fechaBuscada) {
 			    		resultado.add(cita);
 			    	
@@ -78,11 +79,24 @@ public class SistenmaCitas {
 			    } return resultado;
 			
 			}
-
-	public void solicitarCitaPorMedico(Medico medico, Paciente paciente, LocalDateTime fecha) {
-		        Cita cita = new Cita(fecha, paciente, medico);
-		        registrarCita(cita);
-		    }
+		
+		public void solicitarCitaPorMedico(Medico medico, Paciente paciente, LocalDateTime fecha) {
+	        Cita cita = new Cita(fecha, paciente, medico);
+	        registrarCita(cita);
+	    }
+		
+		public List<Cita> medicoBuscaCita (String nombreBuscado, LocalDateTime fechaBuscada) {
+				List<Cita> resultado = new ArrayList<>();
+				
+				for (Cita cita : listaCita) {
+					if(cita.getMedico().getNombre() == nombreBuscado) {
+					}else if(cita.getFechaYhora()== fechaBuscada) {
+						resultado.add(cita);
+					
+					}
+				}
+			return resultado;
+			
+		}
 		
 }
-
