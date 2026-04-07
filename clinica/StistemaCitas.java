@@ -78,6 +78,11 @@ public class SistenmaCitas {
 			    } return resultado;
 			
 			}
+
+	public void solicitarCitaPorMedico(Medico medico, Paciente paciente, LocalDateTime fecha) {
+		        Cita cita = new Cita(fecha, paciente, medico);
+		        registrarCita(cita);
+		    }
 		
 }
 
