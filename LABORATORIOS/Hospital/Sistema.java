@@ -39,9 +39,9 @@ public class Sistema {
 	    int lecuemia = 0;
 	    int linfoma = 0;
 
-	    for (Paciente p : listaPacientes) {
-	        // Usamos el getter que creaste
-	        TipoCancer tipo = p.getTipocancer();
+	    for (Paciente paciente : listaPacientes) {
+	        // Usamos el getter
+	        TipoCancer tipo = paciente.getTipocancer();
 	        
 	        if (tipo == TipoCancer.Sarcoma) {
 	            sarcoma++;
@@ -67,8 +67,8 @@ public class Sistema {
 	    int remision = 0;
 	    int fallecido = 0;
 
-	    for (Paciente p : listaPacientes) {
-	        String estado = p.getEstadoActual().toLowerCase(); // Para evitar errores de mayúsculas
+	    for (Paciente paciente : listaPacientes) {
+	        String estado = paciente.getEstadoActual().toLowerCase(); // Para evitar errores de mayúsculas
 	        if (estado.contains("tratamiento")) {
 	            tratamiento++;
 	        } else if (estado.contains("remisión") || estado.contains("remision")) {
