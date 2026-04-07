@@ -17,10 +17,6 @@ public class SistenmaCitas {
 		}
 	
 
-		public void agregarCita(Cita cita) {
-			this.listaCita.add(cita);
-			
-		}
 		public void agregarMedico(Medico medico) {
 			this.listaMedico.add(medico);
 			
@@ -29,6 +25,19 @@ public class SistenmaCitas {
 			this.listaPaciente.add(paciente);
 			
 		}
+
+		public void registrarCita(Cita cita) {
+	        if (cita != null) {
+	            this.listaCitas.add(cita);
+	            System.out.println("Cita registrada correctamente.");
+	        }
+	    }
+		public void cancelarCita(Cita cita) {
+		        if (cita != null) {
+		            cita.setEstado(false);
+		            System.out.println("Cita cancelada con éxito.");
+		        }	        
+		    }
 		
 		
 		public List<Cita> buscarPorPaciente (String nombreBuscado) {
