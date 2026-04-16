@@ -9,7 +9,7 @@ public class Carro extends Vehiculo {
 	}
 
 	public void mover() {
-		
+		System.out.println("Transforma la energía del combustible en movimiento mecánico. El motor genera fuerza, que se transmite a través de la caja de cambios y el diferencial para hacer girar las ruedas, creando el movimiento.");
 	}
 	
 	public int calcularPeaje() {
