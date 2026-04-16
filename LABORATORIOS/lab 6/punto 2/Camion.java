@@ -14,6 +14,7 @@ public class Camion extends Vehiculo{
 		// TODO Auto-generated constructor stub
 	}
 	public void mover(){
+		System.out.println("Se mueven mediante un sistema de tren motriz que transforma la energía química del combustible en movimiento, transmitiendo potencia del motor a las ruedas");
 		
 	}
 	public int calcularPeaje() {
