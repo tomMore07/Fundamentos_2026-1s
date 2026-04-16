@@ -11,7 +11,7 @@ public class Moto extends Vehiculo {
 	}
 	
 	public void mover(){
-		
+		System.out.println("Se mueve mediante un motor de combustión interna que quema combustible, moviendo pistones y girando un cigüeñal. Esta rotación se transfiere a la rueda trasera a través del embrague y una caja de cambios, multiplicando la fuerza para mover el vehículo.");
 	}
 	
 	
