@@ -16,7 +16,7 @@ public class Vehiculo {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Placa: "+ this.placa+ " Marca: "+this.marca+" Velocidad máxima: "+ this.velMax;
+		return "Placa: "+ this.placa+ " Marca: "+this.marca+" Velocidad máxima: "+ this.velMax+ "Km/h";
 		
 	}
 	
