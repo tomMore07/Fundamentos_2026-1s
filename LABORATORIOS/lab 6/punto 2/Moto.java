@@ -4,7 +4,7 @@ public class Moto extends Vehiculo {
 
 	private String tipo;
 	
-	public Moto(String placa, String marca, int velMax) {
+	public Moto(String placa, String marca, int velMax, String tipo) {
 		super(placa, marca, velMax);
 		this.tipo = tipo;
 		// TODO Auto-generated constructor stub
