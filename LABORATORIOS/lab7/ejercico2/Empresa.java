@@ -14,8 +14,8 @@ public class Empresa {
 		ProductoPerecedero productoP3 = new ProductoPerecedero(1067, "Alimento", 10.50, 3 );
 		
 		ProductoNoPerecedero productoNP1 = new ProductoNoPerecedero(1033, "Alimento", 15.50, 'A' );
-		ProductoNoPerecedero productoNP2 = new ProductoNoPerecedero(1033, "Alimento", 15.50, 'B' );
-		ProductoNoPerecedero productoNP3 = new ProductoNoPerecedero(1033, "Alimento", 15.50, 'C' );
+		ProductoNoPerecedero productoNP2 = new ProductoNoPerecedero(1033, "Lacteo", 11.20, 'B' );
+		ProductoNoPerecedero productoNP3 = new ProductoNoPerecedero(1033, "Lacteo", 18.70, 'C' );
 		
 		listaProductos.add(productoP1);
 		listaProductos.add(productoP2);
@@ -27,8 +27,9 @@ public class Empresa {
 		
 		// Recorrer la lista e imprimir cada producto
 		for (Producto producto : listaProductos) {
-		    System.out.println(producto.toString());
+		    System.out.println(producto.toString() + " Precio de venta: " + producto.precioVenta());
 		}
+		
 	}
 
 }
