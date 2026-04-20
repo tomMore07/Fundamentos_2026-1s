@@ -17,7 +17,7 @@ public class AppFigura {
 		
 		listaFiguras.add(circulo1);
 		listaFiguras.add(triangulo);
-		listaFiguras.add(circulo1);
+		listaFiguras.add(cuadrado1);
 		
 		System.out.println(listaFiguras.get(1).calcularArea());
 		
