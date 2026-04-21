@@ -11,7 +11,7 @@ public class ProductoNoPerecedero extends Producto {
     }
 
     // Método de validación interna
-    public char validarTipo(char tipoIngresado) {
+    private char validarTipo(char tipoIngresado) {
         if (tipoIngresado == 'A' || tipoIngresado == 'B' || tipoIngresado == 'C') {
             return tipoIngresado;
         } else {
