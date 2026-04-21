@@ -25,22 +25,27 @@ public class ProductoNoPerecedero extends Producto {
 
 
 	@Override
-	public int precioVenta() {
+	public double precioVenta() {
 		// TODO Auto-generated method stub
+		double precioFinal = this.precio;
 		if(tipo == 'A') {
-			precio = 0;
-			precio = precio * 0.03;
-		}
-		if(tipo == 'B') {
-			precio = precio * 0.02;
-		}
-		if(tipo == 'C') {
-			precio = precio * 0.015;
-		}
-		else {
+			
+			precioFinal = precioFinal * 0.03;
+			
+		} else if(tipo == 'B') {
+			
+			precioFinal = precioFinal * 0.02;
+			
+		} else if(tipo == 'C') {
+			
+			precioFinal = precioFinal * 0.015;
+			
+		} else {
+			
 			System.out.println("No esta permitido yucaaaaa");
+			
 		}
-		return (int)precio;
+		return (double)precioFinal;
 	}
 	
 	public void asignacionTipoProducto() {
@@ -51,9 +56,10 @@ public class ProductoNoPerecedero extends Producto {
 
 	@Override
 	public String toString() {
-		return "No Perecedero: " + super.toString() + " Tipo: " + this.tipo + "Precio de venta: " + precio;
+		return "No Perecedero: " + super.toString() + " Tipo: " + this.tipo;
 	}
 	
 	
 
 }
+
