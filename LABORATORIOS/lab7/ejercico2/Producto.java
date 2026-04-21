@@ -51,7 +51,7 @@ public abstract class Producto {
 
 
 
-	public abstract int precioVenta();
+	public abstract double precioVenta();
 
 	@Override
 	public String toString() {
@@ -62,3 +62,4 @@ public abstract class Producto {
 	
 	
 }
+
