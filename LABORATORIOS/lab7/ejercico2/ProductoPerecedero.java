@@ -24,33 +24,34 @@ public class ProductoPerecedero extends Producto {
 
 
 	@Override
-	public int precioVenta() {
+	public double precioVenta() {
 		// TODO Auto-generated method stub
+		double precioFinal = this.precio;
 		if(diasCaducar == 1) {
-			precio = 0;
-			precio = precio/4;
-		}
-		
-		if (diasCaducar == 2) {
-			precio = 0;
-			precio = precio/3;
-		}
-		
-		if (diasCaducar == 3) {
-			precio = 0;
-			precio = precio/2;
-		}
-		else {
+			
+			precioFinal = precioFinal/4;
+			
+		} else if (diasCaducar == 2) {
+			
+			precioFinal = precioFinal/3;
+			
+		} else if (diasCaducar == 3) {
+			
+			precioFinal = precioFinal/2;
+			
+		} else {
+			
 			System.out.println("Nokas, no esta permitido");
 		}
-		return (int) precio;
+		return (double) precioFinal;
 	}
 
 	@Override
 	public String toString() {
-		return "Perecederos "+ super.toString() + " Dias a caducar: " + this.diasCaducar + "Precio de venta" + precio;
+		return "Perecederos "+ super.toString() + " Dias a caducar: " + this.diasCaducar;
 	}
 	
 	
 
 }
+
