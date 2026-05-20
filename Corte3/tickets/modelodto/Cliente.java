@@ -38,6 +38,13 @@ public class Cliente implements Serializable {
     public void setCantBoletos(int cantBoletos) {
         this.cantBoletos = cantBoletos;
     }
+    public char getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(char localidad) {
+        this.localidad = localidad;
+    }
     
     
 }
