@@ -1,3 +1,7 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
 package com.mycompany.tickets.controlador;
 
@@ -74,7 +78,8 @@ public class ClienteControlador implements ActionListener{
     }
 
     private void modificar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        int index = modelo.buscarIndice(cliente);
+        this.modelo.modificar(index, cliente);
     }
     private void buscar() {
         int documento = Integer.valueOf(this.vista.documentoIn.getText());
@@ -87,7 +92,6 @@ public class ClienteControlador implements ActionListener{
 
     }
     private void eliminar() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        this.modelo.eliminar(cliente);
     }
 }
-
