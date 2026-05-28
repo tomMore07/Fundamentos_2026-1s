@@ -81,7 +81,7 @@ public class ClienteControlador implements ActionListener {
         if (modelo.registrar(cliente))
             JOptionPane.showMessageDialog(null, "¡Boleto registrado exitosamente!");
         else if (modelo.buscar(cliente.getDocumento()) != null)
-            JOptionPane.showMessageDialog(null, "Ya existe un registro con ese documento, o te quedaste sin boleto :(");
+            JOptionPane.showMessageDialog(null, "Ya existe un registro con ese documento");
          else
         JOptionPane.showMessageDialog(null, "No hay suficientes asientos disponibles en esa localidad.");
     }
