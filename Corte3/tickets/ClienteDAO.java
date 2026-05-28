@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  *
- * @author tomy/SARA
+ * @author SARA/tomy
  */
 public class ClienteDAO {
 
