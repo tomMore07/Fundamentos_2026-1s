@@ -13,20 +13,24 @@ import java.util.List;
  * @author tomy
  */
 public class ClienteDAO {
-    private List <Cliente> listaCliente;
-    
-    public ClienteDAO(){
-        listaCliente = new ArrayList();
+
+    private List<Cliente> listaCliente;
+
+    public ClienteDAO() {
+        listaCliente = new ArrayList<>();
     }
 
-
-    public boolean registrar(Cliente cliente){
+    public boolean registrar(Cliente cliente) {
+        if (buscar(cliente.getDocumento()) != null) {
+            return false;
+        }
         return listaCliente.add(cliente);
     }
-    
+
+
     public Cliente buscar(int documento) {
         for (Cliente cliente : listaCliente) {
-            if(documento == cliente.getDocumento())
+            if (documento == cliente.getDocumento())
                 return cliente;
         }
         return null;
@@ -36,19 +40,16 @@ public class ClienteDAO {
      * @param index
      * @param cliente 
      */
-    public void modificar(int index, Cliente cliente){
+  
+    public void modificar(int index, Cliente cliente) {
         listaCliente.set(index, cliente);
     }
-    /**
-     * 
-     *  
-     */
-    
-    public void eliminar(Cliente cliente){
+
+    public void eliminar(Cliente cliente) {
         listaCliente.remove(cliente);
     }
-    
-    public int buscarIndice(Cliente cliente){
+
+    public int buscarIndice(Cliente cliente) {
         return listaCliente.indexOf(cliente);
     }
 }
