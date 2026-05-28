@@ -8,7 +8,7 @@ import java.io.Serializable;
 
 /**
  *
- * @author tomy
+ * @author tomy/SARA
  */
 public class Cliente implements Serializable {
 
