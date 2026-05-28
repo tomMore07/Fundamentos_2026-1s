@@ -9,7 +9,7 @@ import com.mycompany.tickets.vista.ClienteVista;
 
 /**
  *
- * @author tomy
+ * @author SARA/tomy
  */
 
 public class Tickets1 {
