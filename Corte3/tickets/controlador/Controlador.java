@@ -69,7 +69,7 @@ public class ClienteControlador implements ActionListener {
         else if (this.vista.localidadD.isSelected()) localidad = 'D';
 
         if (localidad == '\0') {
-            JOptionPane.showMessageDialog(null, "Seleccione una localidad.");
+            JOptionPane.showMessageDialog(null, "Selecciona una localidad.");
             return;
         }
 
@@ -81,13 +81,13 @@ public class ClienteControlador implements ActionListener {
         if (modelo.registrar(cliente))
             JOptionPane.showMessageDialog(null, "¡Boleto registrado exitosamente!");
         else
-            JOptionPane.showMessageDialog(null, "Ya existe un registro con ese documento o te quedaste sin boleto :(");
+            JOptionPane.showMessageDialog(null, "Ya existe un registro con ese documento, o te quedaste sin boleto :(");
     }
 
 
     private void buscar() {
         if (this.vista.documentoIn.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Ingrese un documento para buscar.");
+            JOptionPane.showMessageDialog(null, "Ingresa un documento para buscar.");
             return;
         }
 
@@ -113,7 +113,7 @@ public class ClienteControlador implements ActionListener {
 
     private void modificar() {
         if (cliente == null) {
-            JOptionPane.showMessageDialog(null, "Primero busque el cliente que deseas modificar.");
+            JOptionPane.showMessageDialog(null, "Primero busca el cliente que deseas modificar.");
             return;
         }
 
@@ -140,7 +140,7 @@ public class ClienteControlador implements ActionListener {
 
     private void eliminar() {
         if (cliente == null) {
-            JOptionPane.showMessageDialog(null, "Primero busque el cliente que desee eliminar.");
+            JOptionPane.showMessageDialog(null, "Primero busca el cliente que desee eliminar.");
             return;
         }
 
