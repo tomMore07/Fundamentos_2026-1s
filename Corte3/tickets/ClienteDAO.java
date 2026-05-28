@@ -37,7 +37,7 @@ public class ClienteDAO {
 
     public boolean registrar(Cliente cliente) {
         if (buscar(cliente.getDocumento()) != null)
-            return false; // documento duplicado
+            return false; 
 
         int max = switch (cliente.getLocalidad()) {
             case 'A' -> MAX_A;
@@ -48,7 +48,7 @@ public class ClienteDAO {
         };
 
         if (contarBoletos(cliente.getLocalidad()) + cliente.getCantBoletos() > max)
-            return false; // se pasaría del límite
+            return false; 
 
         return listaCliente.add(cliente);
     }
