@@ -6,7 +6,7 @@ package com.mycompany.tickets.vista;
 
 /**
  *
- * @author tomy/SARA
+ * @author SARA/tomy
  */
 public class ClienteVista extends javax.swing.JFrame {
     
